@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인 / 회원가입 폼 템플릿</title>
+    <title id="title">LOGIN</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
@@ -29,17 +29,17 @@
                 <button class="submit">로그인</button>
             </form>
             <form id="register" action="" class="input-group">
-                <input type="text" class="input-field" placeholder="User name or Email" required><i class="bi bi-check2-square"></i>
-                <p id="" class="massage"></p>
-                <input type="email" class="input-field" placeholder="Your Email" required><i class="bi bi-check2-square"></i>
-                <p class="massage"></p>
-                <input type="password" class="input-field" placeholder="Enter Password" required><i class="bi bi-check2-square"></i>
-                <p class="massage"></p>
-                <input type="password" class="input-field" placeholder="Password Check" required><i class="bi bi-file-lock-fill"></i>
-                <p class="massage"></p>
-                <input type="password" class="input-field" placeholder="Phone Number(000-0000-000)" required><i class="bi bi-check2-square"></i>
-                <p class="massage"></p>
-                <input type="checkbox" class="checkbox"><span>약관에 동의합니다.</span>
+                <input type="text" id="id1" class="input-field" onblur="idCheck()" placeholder="아이디" required><i id="chkicon1" class="bi bi-check2-square"></i>
+                <p id="chkid1" class="massage"></p>
+                <input type="email" id="email1" class="input-field" onblur="emailCheck()" placeholder="Your Email" required><i id="chkicon2" class="bi bi-check2-square"></i>
+                <p id="chkid2" class="massage"></p>
+                <input type="password" id="password1" class="input-field" onblur="passwordCheck()" placeholder="Enter Password" required><i id="chkicon3" class="bi bi-check2-square"></i>
+                <p id="chkid3" class="massage"></p>
+                <input type="password" id="password2" class="input-field" onblur="passwordEquals()" placeholder="Password Check" required><i id="chkicon4" class="bi bi-file-lock-fill"></i>
+                <p id="chkid4" class="massage"></p>
+                <input type="text" id="phone1" class="input-field" onblur="phoneCheck()" placeholder="Phone Number(000-0000-000)" required><i id="chkicon5" class="bi bi-check2-square"></i>
+                <p id="chkid5" class="massage"></p>
+                <input type="checkbox" class="checkbox" required><span>약관에 동의합니다.</span>
                 <button class="submit">회원가입</button>
             </form>
         </div>
@@ -49,7 +49,6 @@
         var y = document.getElementById("register");
         var z = document.getElementById("btn");
         var from = document.getElementById("from");
-        
         function login(){
             x.style.left = "50px";
             y.style.left = "450px";
@@ -63,7 +62,109 @@
             z.style.left = "115px";
             form.style.height = "600px";
         }
+
+        function idCheck(){
+            const id1 = document.getElementById("id1").value;
+            const exp1 = /^(?=.*[a-z])(?=.*[\d])[a-z\d]{5,20}$/;
+            const chkid1 = document.getElementById("chkid1");
+            const chkicon1 = document.getElementById("chkicon1");
+            if(id1.match(exp1)){
+                chkid1.style.color = "green";
+                chkid1.innerHTML = "사용가능한 아이디입니다.";
+                chkicon1.style.color = "greenyellow";
+            }else if(id1.length == 0){
+                chkid1.style.color = "red";
+                chkid1.innerHTML = "필수 입력 항목입니다..";
+                chkicon1.style.color = "red";
+            }
+            else{
+                chkid1.style.color = "red";
+                chkid1.innerHTML = "5~20자의 영문 소문자, 숫자만 사용 가능합니다.";
+                chkicon1.style.color = "red";
+            }
+        }
+
+        function emailCheck(){
+            const email1 = document.getElementById("email1").value;
+            const exp2 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+            const chkid2 = document.getElementById("chkid2");
+            const chkicon2 = document.getElementById("chkicon2");
+            if(email1.match(exp2)){
+                chkid2.innerHTML = "";
+                chkicon2.style.color = "greenyellow";
+            }else if(email1.length == 0){
+                chkid2.style.color = "red";
+                chkid2.innerHTML = "필수 입력 항목입니다.";
+                chkicon2.style.color = "red";
+            }
+            else{
+                chkid2.style.color = "red";
+                chkid2.innerHTML = "이메일 주소를 다시 확인해주세요.";
+                chkicon2.style.color = "red";
+            }
+        }
+
+        function passwordCheck(){
+            const password1 = document.getElementById("password1").value;
+            const exp3 = /^[A-Za-z0-9]{6,12}$/;
+            const chkid3 = document.getElementById("chkid3");
+            const chkicon3 = document.getElementById("chkicon3");
+            if(password1.match(exp3)){
+                chkid3.innerHTML = "";
+                chkicon3.style.color = "greenyellow";
+            }else if(password1.length == 0){
+                chkid3.style.color = "red";
+                chkid3.innerHTML = "필수 입력 항목입니다.";
+                chkicon3.style.color = "gray";
+            }
+            else{
+                chkid3.style.color = "red";
+                chkid3.innerHTML = "6~12자 영문 대 소문자,숫자를 사용하세요.";
+                chkicon3.style.color = "red";
+            }
+        }
+
+        function passwordEquals(){
+            const password1 = document.getElementById("password1").value;
+            const password2 = document.getElementById("password2").value;
+            const chkid4 = document.getElementById("chkid4");
+            const chkicon4 = document.getElementById("chkicon4");
+            if(password2.length == 0){
+                chkid4.style.color = "red";
+                chkid4.innerHTML = "필수 입력 항목입니다.";
+                chkicon4.style.color = "gray";
+
+            }else if(password1==password2){
+                chkid4.style.color = "green";
+                chkid4.innerHTML = "비밀번호가 일치합니다.";
+                chkicon4.style.color = "greenyellow";
+            }
+            else{
+                chkid4.style.color = "red";
+                chkid4.innerHTML = "비밀번호가 일치하지 않습니다.";
+                chkicon4.style.color = "red";
+            }
+        }
+        function phoneCheck(){
+            const phone1 = document.getElementById("phone1").value;
+            const exp5 = /^\d{2,3}-\d{3,4}-\d{4}$/;
+            const chkid5 = document.getElementById("chkid5");
+            const chkicon5 = document.getElementById("chkicon5");
+            if(phone1.match(exp5)){
+                chkid5.innerHTML = "";
+                chkicon5.style.color = "greenyellow";
+            }else if(phone1.length == 0){
+                chkid5.style.color = "red";
+                chkid5.innerHTML = "필수 입력 항목입니다.";
+                chkicon5.style.color = "gray";
+            }
+            else{
+                chkid5.style.color = "red";
+                chkid5.innerHTML = "전화번호 형식을 맞춰주세요.";
+                chkicon5.style.color = "red";
+            }
+        }
+
     </script>
-</body>
 </body>
 </html>

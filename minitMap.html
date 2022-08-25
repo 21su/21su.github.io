@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>MinitMap</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <style>
+            section.resume-section{
+                max-width: none;
+            }
+        </style>
+        <script>
+            $(window).resize(function () {
+            resize();
+        });
+        function resize(){
+            var width_size = window.outerWidth;
+            var sideText = document.getElementById("sideText");
+            var mainText = document.getElementById("mainText");
+            if (width_size < 785) {
+                sideText.style.position = "static";
+                sideText.style.marginTop = "15px";
+                mainText.style.marginTop = "150px";
+            } else{
+                sideText.style.position = "absolute";
+                sideText.style.marginTop = "0px";
+                mainText.style.marginTop = "0px";
+            }
+        }
+        </script>
+    </head>
+    <body id="page-top" onload="resize()">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="index.html">
+                <span class="d-block d-lg-none">H.SS Portfolio</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#my">나의역할</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#map">지도 출력</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#search">1탭 지도 검색 기능</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#onfoot">2탭 경로 탐색 기능</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#togeter">3,4탭 호환성 및 합체</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#myp">마이플레이스 및 루틴</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid p-0">
+            <section class="resume-section" id="about">
+                <div class="resume-section-content" style="margin-top:-200px;">
+                    
+                    <div class="container" id="mainText">
+                      <div class="row mb-4 align-items-center">
+                        <div class="col-md-6" data-aos="fade-up">
+                          <h2>Team Project</h2>
+                          <p>T-map API를 활용한 도보기준 신호등 지도</p>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <div class="site-section pb-0">
+                        <div class="container">
+                            <div class="row align-items-stretch">
+                                <div class="col-md-8" data-aos="fade-up">
+                                    <img src="img/rutin_1.PNG" alt="Image" class="img-fluid">
+                                </div>
+                                <div class="col-md-3" id="sideText" data-aos="fade-up" data-aos-delay="100" style="position: absolute; right: 0px; margin-right: 2%;">
+                                    <div class="sticky-content">
+                                        <h3 class="h3">프로젝트 이름 : MinitMap</h3>
+                                        <br>
+                                        <div class="mb-5">
+                                            <h5>프로젝트 기획의도</h5>
+                                            <p> 시간을 중요시하는 현대사회에 낭비하는 시간이 너무 많다. 신호등에서 대기하는 단 1분이라도 절약하기 위해 이 프로젝트를 기획하게 됐다</p>
+                                        
+                                        </div>
+                                    
+                                        <h4 class="h4 mb-3">use skill</h4>
+                                        <ul class="list-unstyled list-line mb-5">
+                                            <li>Java</li>
+                                            <li>JavaScript</li>
+                                            <li>CSS</li>
+                                            <li>HTML</li>
+                                            <li>MySQL</li>
+                                            <li>Spring Boot</li>
+                                            <li>MySQL Developer</li>
+                                            <li>IntelliJ</li>
+                                            <li>Apache Tomcat9.0</li>
+                                            <li>T-map API</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 80px; margin-bottom: -80px;">
+                                    <p><a href="https://github.com/preferJ/MinitMap" class="readmore">프로젝트 상세코드 확인하기(GitHub)</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="my">
+                <div class="resume-section-content">
+                    <div class="container">
+                        <h3 class="mb-5">나의 역할</h2>
+                        <br>
+                        <h4>공통역할 : </h4>
+                        <br />
+                        <p>&nbsp;&nbsp;1. 각각 생각해온 아이디어로 진행된 회의를 통해 프로젝트 기획 및 총괄</p>
+                        <p>&nbsp;&nbsp;2. 총괄 후 데이터베이스 정의, 설계 및 구현</p>
+                        <p>&nbsp;&nbsp;3. 프로젝트 시작하기 전 개개인의 역량에 맞춰 역할을 분배</p>
+                        <p>&nbsp;&nbsp;4. 프로젝트 시작하기 전 전체적인 자료조사</p>
+                        <br />
+                        <h4>내 주요역할:</h4>
+                        <br />
+                        <h5>1. 지도 띄우기 및 전체 지도 관리</h5>
+                        <p>&nbsp;&nbsp;- TMap API에서 제공해주는 앱키를 사용하여 ajax를 통해 TMap에 지도를 요청하여 화면에 출력함</p>
+                        <p>&nbsp;&nbsp;- 지도를 사용한 기능들을 조사</p>
+                        <p>&nbsp;&nbsp;- 마커 객체를 만들어 지도에 원하는 위치에 표시를 할 수 있게 만듦</p>
+                        <p>&nbsp;&nbsp;- 저장되어있는 원하는 장소를 바로 찾아주는 마이플레이스 기능과 늘 가던 길을 바로 찾아주는 루틴 기능을 구현</p>
+                        <p>&nbsp;&nbsp;- 총 4개의 탭으로 구성</p>
+                        <br />
+                        <h5>2. 1 탭 지도 검색 기능</h5>
+                        <p>&nbsp;&nbsp;- 1 탭은 검색 기능으로 AJAX를 통해 검색어를 TMap에 보내면 설정된 데이터에 따라 보고 있는 지도의 위치를 기준으로 6까지의 검색 결과를 객체로 받아와 HTML에 뿌려줌</p>
+                        <p>&nbsp;&nbsp;- 검색된 결과값은 지도에 마커로 표시되게 만들고 클릭 시 해당 마커의 이미지 색이 바뀌면서 경로 탐색을 위한 출발지와 도착지에 집어넣을 수 있는 버튼이 나오게 만듦</p>
+                        <p>&nbsp;&nbsp;- 로그인이 되어있으면 마이플레이스에 저장할 수 있게 버튼을 만들어 둠</p>
+                        <p>&nbsp;&nbsp;- 출발지와 도착지 버튼 클릭 시 2 탭으로 넘어가 출발지/도착지위치에 설정 함</p>
+                        <br />
+                        <h5>3. 2탭 경로 탐색 기능</h5>
+                        <p>&nbsp;&nbsp;- 2 탭에서는  맵 클릭 이벤트가 활성화 되어, 지도 클릭 시 클릭 위치에 출발지와 도착지를 차례대로 설정이 되게 만듦</p>
+                        <p>&nbsp;&nbsp;- 출발지와 도착지는 각각 출발지/도착지 마커를 이용하여 지도에 표시됨</p>
+                        <p>&nbsp;&nbsp;- 출발지/도착지 검색 창을 만들어 2탭에서도 검색이 가능하게 만들고, 검색 후에 나온 검색 결과를 통해 바로 출발지/도착지 설정을 가능하게 만듦</p>
+                        <p>&nbsp;&nbsp;- 출발지와 도착지가 모두 입력이 되면 AJAX로 출발지와 도착지 마커의 좌표값을 가져와 TMap으로 데이터를 보내고 그 후 TMap에서 받은 데이터를 기준으로 최적의 도보 경로를 탐색해 객체로 값을 이쪽으로 보내주면 그 객체를 통해 경로를 지도에 뿌린다.</p>
+                        <p>&nbsp;&nbsp;- 로그인이 되어있으면 경로 탐색이 완료된 후 그 경로 데이터를 루틴에 저장할 수 있게 버튼을 만들어둠</p>
+                        <br />
+                        <h5>4. 3, 4 탭 조정</h5>
+                        <p>&nbsp;&nbsp;- 팀원이 만든 3 탭과 4 탭을 기존에 만든 1, 2 탭과 호환되게 조정하고, 어색함이 없게 스타일을 조정함</p>
+                        <p>&nbsp;&nbsp;- 모든 탭을 하나의 창에서 이루어질 수 있게 코드를 합침</p>
+                        <br />
+                        <h5>5 마이플레이스와 루틴 기능</h5>
+                        <p>&nbsp;&nbsp;- 마이플레이스/루틴 테이블과 멤버 테이블을 연동하여 로그인 상태라면 해당 로그인된 계정의 아이디값을 통해 마이플레이스와 루틴 값을 모두 가져옴</p>
+                        <p>&nbsp;&nbsp;- 가져온 마이플레이스를 클릭 시 지도에 마커를 출력하고 출발지와 도착지를 설정할 수 있게 함</p>
+                        <p>&nbsp;&nbsp;- 가져온 루틴을 클릭 시 2 탭으로 넘어가 저장되어있는 경로를 지도에 표시해주고 출발지와 도착지의 검색창에 해당 좌표의 주소 값을 넣는다.</p>
+                        <br />
+                        <h4>기타역할 :</h4>
+                        <br />
+                        <p>&nbsp;&nbsp;-팀원들이 작성한 코드들을 하나로 합치고 그에 대한 에러코드 및 오류를 검출해 수정함. </p>
+                        <p>&nbsp;&nbsp;-메인 화면의 CSS를 관리함</p>
+                        </div>
+                    </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="map">
+                <div class="resume-section-content">
+                    <div class="container" style="word-break: break-all;">
+                        <h3 class="mb-5">지도 출력</h3>
+                        <img src="img/minitmap/map.png" style="width: 40%;height: 40%; float: left; margin: 10px;">
+                        <span>
+                            &nbsp;&nbsp;내가 이번 프로젝트에서 가장 중요하다고 생각했던 것은 메인이 되는 신호등도 다른 기능도 아닌 지도라고 생각했고 일단 지도가 뜨지않으면 아무것도 할 수 없으며, 모든 작업이 지도 안에서 처리되는 과정이기에 가장먼저 지도 API를 알아봤다.<br /><br />
+                            &nbsp;&nbsp;지도 API를 알아보는 과정에서 카카오맵API 와 T-map API 둘중 어느것을 사용할지 팀원들과 의견을 주고받았고, 결과적으로 우리 프로그렘에 알맞다 생각해 <b style="color: blue;">T-Map API</b>를 사용하기로 정했다<br />
+                            &nbsp;&nbsp;지도를 띄우는 것 자체는 API가 잘되어있어 간단했는데, T-Map에 앱키를 요청하고 해당 앱키를 이용하여 <b style="color: blue;">T-map javascript</b>를 호출하면 지도인 <b style="color: red;">Tmap2.Map</b> 를 호출할 수 있게된다.<br />
+                            &nbsp;&nbsp;그 후 <b style="color: red;">Tmap2.Map</b>를 이용해 객체를 만들고, 해당 지도의 설정을 객체 안에서 해주면 해당 사진과 같이 지도가 출력된다.
+                        </div>
+                        <div style="clear: both; margin-left: 20px;">
+                            <p style="color: red;"><b>&lt;script script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=발급받은 App key">&lt;/script></b></p>
+                            위의 스크립트 문이 <b style="color: blue;">T-map javascript</b>의 호출문이다
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="search">
+                <div class="resume-section-content">
+                    <div class="container">
+                        <h3 class="mb-5">1탭: 지도 검색 기능</h3>
+                        <img src="img/minitmap/search.png" alt="Image" class="img-fluid">
+                        <div>
+                            &nbsp;&nbsp; 지도검색 기능은 받아온 앱키로 <b style='color: blue;'>T-map API</b>에 <b>ajax</b>를 이용해 검색키워드, 검색기준 위치, 검색할 갯수를 양식에 맞춰 보내면 필요한 정보를 받아주는 방식으로 되어있다.<br />
+                            &nbsp;&nbsp; 나는 검색키워드는 input창으로 데이터를 받아올 수 있게 설정하고, 검색 위치는 지도인 map객체의 <b style='color: red;'>getCenter()</b>를 이용해 현제 보고있는 지도의 위치를 기준으로 정보를 받아올 수 있게 했다.
+                            &nbsp;&nbsp; API를 처음써본 나는 받아온 데이터객체에서 원하는 정보를 꺼내는데 어려움이 있었지만, 여러 시행착오 끝에 데이터객체 안의 원하는 데이터를 꺼낼 수 있게 되었고 해당 정보를 이용해 2탭인 경로탐색 기능과도 연계시켰다.<br />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="onfoot">
+                <div class="resume-section-content">
+                    <div class="container">
+                    <h3 class="mb-5">2탭: 경로 탐색 기능</h3>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="togeter">
+                <div class="resume-section-content">
+                    <div class="container">
+                    <h3 class="mb-5">3,4 탭 호환성 및 합체</h3>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="myp">
+                <div class="resume-section-content">
+                    <div class="container">
+                    <h3 class="mb-5">마이플레이스 및 루틴</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

@@ -36,7 +36,7 @@
             } else{
                 sideText.style.position = "absolute";
                 sideText.style.marginTop = "0px";
-                mainText.style.marginTop = "0px";
+                mainText.style.marginTop = "80px";
             }
         }
         </script>
@@ -44,7 +44,7 @@
     <body id="page-top" onload="resize()">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="index.html">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">H.SS Portfolio</span>
                 <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="..." /></span>
             </a>
@@ -58,8 +58,10 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#onfoot">2탭 경로 탐색 기능</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#togeter">3,4탭 호환성 및 합체</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#myp">마이플레이스 및 루틴</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#gps">내 위치</a></li>
                 </ul>
             </div>
+            <button class="d-grid gap-2 col-10 mx-auto mb-5 btn btn-outline-secondary" style="margin-top: -70px;" type="button" onclick="location.href='index.html'">홈으로</button>
         </nav>
         <div class="container-fluid p-0">
             <section class="resume-section" id="about">
@@ -107,6 +109,7 @@
                                 </div>
                                 <div style="margin-top: 80px; margin-bottom: -80px;">
                                     <p><a href="https://github.com/preferJ/MinitMap" class="readmore">프로젝트 상세코드 확인하기(GitHub)</a></p>
+                                    <a href="pptx/MinitMap.pptx" download>발표 자료 pptx 다운</a>
                                 </div>
                             </div>
                         </div>
@@ -171,16 +174,18 @@
                 <div class="resume-section-content">
                     <div class="container" style="word-break: break-all;">
                         <h3 class="mb-5">지도 출력</h3>
-                        <img src="img/minitmap/map.png" style="width: 40%;height: 40%; float: left; margin: 10px;">
-                        <span>
-                            &nbsp;&nbsp;내가 이번 프로젝트에서 가장 중요하다고 생각했던 것은 메인이 되는 신호등도 다른 기능도 아닌 지도라고 생각했고 일단 지도가 뜨지않으면 아무것도 할 수 없으며, 모든 작업이 지도 안에서 처리되는 과정이기에 가장먼저 지도 API를 알아봤다.<br /><br />
-                            &nbsp;&nbsp;지도 API를 알아보는 과정에서 카카오맵API 와 T-map API 둘중 어느것을 사용할지 팀원들과 의견을 주고받았고, 결과적으로 우리 프로그렘에 알맞다 생각해 <b style="color: blue;">T-Map API</b>를 사용하기로 정했다<br />
-                            &nbsp;&nbsp;지도를 띄우는 것 자체는 API가 잘되어있어 간단했는데, T-Map에 앱키를 요청하고 해당 앱키를 이용하여 <b style="color: blue;">T-map javascript</b>를 호출하면 지도인 <b style="color: red;">Tmap2.Map</b> 를 호출할 수 있게된다.<br />
-                            &nbsp;&nbsp;그 후 <b style="color: red;">Tmap2.Map</b>를 이용해 객체를 만들고, 해당 지도의 설정을 객체 안에서 해주면 해당 사진과 같이 지도가 출력된다.
-                        </div>
-                        <div style="clear: both; margin-left: 20px;">
-                            <p style="color: red;"><b>&lt;script script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=발급받은 App key">&lt;/script></b></p>
-                            위의 스크립트 문이 <b style="color: blue;">T-map javascript</b>의 호출문이다
+                        <img src="img/minitmap/map.png" style="width: 55%;height: 55%; float: left; margin: 10px;">
+                        <div style="margin-top: 60px;">
+                            <span>
+                                &nbsp;&nbsp;내가 이번 프로젝트에서 가장 중요하다고 생각했던 것은 메인이 되는 신호등도 다른 기능도 아닌 지도라고 생각했고 일단 지도가 뜨지않으면 아무것도 할 수 없으며, 모든 작업이 지도 안에서 처리되는 과정이기에 가장먼저 지도 API를 알아봤다.<br /><br />
+                                &nbsp;&nbsp;지도 API를 알아보는 과정에서 카카오맵API 와 T-map API 둘중 어느것을 사용할지 팀원들과 의견을 주고받았고, 결과적으로 우리 프로그렘에 알맞다 생각해 <b style="color: blue;">T-Map API</b>를 사용하기로 정했다<br />
+                                &nbsp;&nbsp;지도를 띄우는 것 자체는 API가 잘되어있어 간단했는데, T-Map에 앱키를 요청하고 해당 앱키를 이용하여 <b style="color: blue;">T-map javascript</b>를 호출하면 지도인 <b style="color: red;">Tmap2.Map</b> 를 호출할 수 있게된다.<br />
+                                &nbsp;&nbsp;그 후 <b style="color: red;">Tmap2.Map</b>를 이용해 객체를 만들고, 해당 지도의 설정을 객체 안에서 해주면 해당 사진과 같이 지도가 출력된다.
+                            </span>
+                            <div style="clear: both; margin-left: 20px;">
+                                <p style="color: red;"><b>&lt;script script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=발급받은 App key">&lt;/script></b></p>
+                                위의 스크립트 문이 <b style="color: blue;">T-map javascript</b>의 호출문이다
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -211,12 +216,13 @@
                     <div class="container" style="word-break: break-all;">
                     <h3 class="mb-5">2탭: 경로 탐색 기능</h3>
                     <img src="img/minitmap/onfoot.png" style="width: 65%;height: 65%; float: left; margin: 10px;">
+                    <div style="margin-top: 70px;">
                         <span>
-                            중간글
-                        </div>
-                        <div style="clear: both; margin-left: 20px;">
-                            밑글
-                        </div>
+                            &nbsp;&nbsp; 경로탐색 기능도 <b>ajax</b>를 이용해 출발지와 도착지의 정보를 보내면 경로의 객체를 데이터로 담아서 보내주기 때문에 이 데이터를 우리가 사용하는 형식에 맞게 지도에 뿌려주면 된다.<br />
+                            &nbsp;&nbsp; 2탭은 1탭과 다르게 지도 선택시 이벤트를 추가하여 원하는 장소에 출발지와 도착지를 설정할 수 있게 했다. 또한 출발지와 도착지를 검색하여 추가할 수 있게 2개의 input창을 넣어주었다.<br />
+                            &nbsp;&nbsp; 또한 1탭의 검색기능을 통해 2탭으로 넘어왔을 경우 출발지 또는 도착지에 맞는 input창에 해당 장소의 이름이 입력되며, 순서바꾸기 기능으로 출발지와 도착지의 정보를 바꿔줄 수도 있다.<br />
+                            &nbsp;&nbsp; 해당 기능에서 나는 출발지와 도착지의 정보를 출발/도착지 마커의 정보로 집어넣어 코딩을 했고, 해당 마커를 드래그 할 수 있게 하였다. 드래그시에 해당 마커에 맞는 input창에다 마커를 내려놓는 곳의 이름정보를 담게하여 편의성을 놓였고, 마커의 드래그가 끝났을 때 출발지와 도착지의 마커가 모두 있다면 길찾기를 수행하도록 하였다.
+                        </span>
                     </div>
                 </div>
             </section>
@@ -225,7 +231,17 @@
             <section class="resume-section" id="togeter">
                 <div class="resume-section-content">
                     <div class="container">
-                    <h3 class="mb-5">3,4 탭 호환성 및 합체</h3>
+                        <h3 class="mb-5">3,4 탭 호환성 및 탭 통합</h3>
+                        <img src="img/minitmap/main.png" style="width: 65%;height: 65%; float: left; margin: 10px;">
+                        <div style="margin-top: 70px;">
+                            <span>
+                                &nbsp;&nbsp; 사실 위의 화면구성은 우리가 계획했던 구성과는 많이 다른데, 그 이유는 지도가 너무 강해 지도위에 다른것을 띄울수가 없었기 때문이다.<br />
+                                &nbsp;&nbsp; 하지만 <b style="color: red;">개발자도구(F12)</b>를 이용해 <b style="color: blue;">CSS</b>의 <b style="color: red;">z-index</b>를 알아냈고, 이번 건으로 인해 css에서 z축에도 관여를 할 수 있다는 것을 알았다.<br />
+                                덕분에 나는 화면 구성을 전체적으로 손볼 수 있었고, 원래 계획보다 좀더 깔끔한 인터페이스를 구축할 수 있었다.<br /><br />
+                                &nbsp;&nbsp; 그 후 나는 팀원이 만들어놓은 게시글 탭과 신호등 등록 탭을 해당 인터페이스에 맞게 재 디자인하였고, 또한 탭 이동시 화면전환이 불편하고 보기도 안좋을 것이라 생각하여, 해당 4개의 탭을 하나의 HTML안에서 처리할 수 있게 모든 탭을 합치는 작업을 실행했다.<br />
+                                &nbsp;&nbsp; 모든 탭은 현제 나와있는 탭을 제외하곤 모두 화면 밖으로 내보내고, 다른 탭을 클릭하여 탭이 나오게 만들 시엔 현제 탭을 집어넣고 해당 탭을 끌어오는 방식을 선택하였다.
+                            </span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -235,6 +251,33 @@
                 <div class="resume-section-content">
                     <div class="container">
                     <h3 class="mb-5">마이플레이스 및 루틴</h3>
+                    <img src="img/minitmap/myp.png" style="width: 20%;height: 20%; float: left; margin: 10px;">
+                    <div style="margin-top: 70px;">
+                        <span>
+                            &nbsp;&nbsp; 마이플레이스와 루틴은 사용자의 편의성을 높여주기 위한 기능으로 집과같은 자주가는 장소와 출/퇴근길 같이 자주 가는 길을 검색없이 클릭 한번으로 찾아주기 위한 기능이다.<br />
+                            &nbsp;&nbsp; 마이플레이스와 루틴을 저장하는 기능은 1탭과 2탭에 있는데 로그인된 상태로 마이플레이스 1탭에서 검색을 하면 저장할수 있는 버튼이 뜨고, 2탭에서는 경로 탐색이 완료되면 해당 경로를 저장할 수 있게 된다.<br />
+                            &nbsp;&nbsp; 저장시에는 <b>ajax</b>를 이용하여 데이터를 넘기고 그 데이터를 가공해 데이터베이스에 저장시키는 방식을 사용하며, 저장이 완료되었을 경우 해당 데이터를 포함한 해당 유저의 마이플레이스와 루틴의 데이터를 모두 가져와 <b style="color: blue;">innerHTML</b>을 통해 화면에 뿌려주었다.<br />
+                            &nbsp;&nbsp; 저장된 마이플레이스와 루틴을 사용하는 방법은 간단한데 마이플레이스는 클릭하면 출발지 도착지 지정이 가능하게 탭 아래에 버튼이 생기며, 해당 장소의 좌표값을 통해 현제 지도의 위치의 센터값을 해당 위치로 이동시키고 해당 위치에 마커를 찍어 표시를 해준다.<br />
+                            그 후 출발/도착지 버튼을 클릭시 2탭으로 탭이 변경되며 받아온 데이터를 통해 출발/도착지에 맞는 마커를 생성시키며 해당 input창에 장소의 이름을 담는다.<br />
+                            &nbsp;&nbsp; 루틴은 클릭시 바로 2탭으로 넘어가며 담겨있는 데이터를 이용해 각각 출발/도착지를 지정하고 경로를 탐색하며, 해당 경로중앙에 화면의 중심을 이동시킨다.
+                            <div style="clear: both;">
+                                <img src="img/minitmap/myp_test.png" style="width: 45%;height: 20%; float: left; margin: 10px;">
+                                <img src="img/minitmap/rutin_test.png" style="width: 45%;height: 20%; float: left; margin: 10px;">
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <section class="resume-section" id="gps">
+                <div class="resume-section-content">
+                    <div class="container">
+                    <h3 class="mb-5">내 위치</h3>
+                    <img src="img/minitmap/gps.png" style="width: 80%; margin: 10px; align-items: center;">
+                    <div style="margin-top: 70px;">
+                        <span style="clear: both;">
+                            &nbsp;&nbsp; 우측상단 버튼으로 gps기능을 통해 현제 내 위치정보를 받아서 표시할 수 있게 하였다. 해당 버튼은 ON/OFF 기능으로 만들어 gps 신호가 5초에 한번씩 재실행되고 5초마다 내 위치를 최신화 시켜준다.
+                        </span>
                     </div>
                 </div>
             </section>

@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <style>
             section.resume-section{
                 max-width: none;
@@ -28,14 +29,20 @@
             var width_size = window.outerWidth;
             var sideText = document.getElementById("sideText");
             var mainText = document.getElementById("mainText");
-            if (width_size < 785) {
+            var homebut1 = document.getElementById("homebut1");
+            var homebut2 = document.getElementById("homebut2");
+            if (width_size < 1008) {
                 sideText.style.position = "static";
                 sideText.style.marginTop = "15px";
                 mainText.style.marginTop = "150px";
+                homebut1.style.display = "none";
+                homebut2.style.display = "inline";
             } else{
                 sideText.style.position = "absolute";
                 sideText.style.marginTop = "0px";
                 mainText.style.marginTop = "80px";
+                homebut1.style.display = "inline";
+                homebut2.style.display = "none";
             }
         }
         </script>
@@ -43,14 +50,18 @@
     <body id="page-top" onload="resize()">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">H.SS Portfolio</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="..." /></span>
-            </a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                    <span class="d-block d-lg-none" style="">H.SS Portfolio</span>
+                    <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="..." /></span>
+                </a>
+                <div id="homebut2" style="display: none;">
+                    <button class="btn btn-outline-secondary" style="float: right;" type="button" onclick="location.href='index.html'">홈으로</button>
+                </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#my">기능</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#main">메인화면</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#user">회원 관련</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#save">월드컵 제작</a></li>
@@ -58,7 +69,9 @@
                     <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li> -->
                 </ul>
             </div>
-            <button class="d-grid gap-2 col-10 mx-auto mb-5 btn btn-outline-secondary" style="margin-top: -70px;" type="button" onclick="location.href='index.html'">홈으로</button>
+            <div id="homebut1" style="display: inline; width: 100%;">
+                <button class="d-grid gap-2 col-10 mx-auto mb-5 btn btn-outline-secondary" style="margin-top: -70px;" type="button" onclick="location.href='index.html'">홈으로</button>
+            </div>
         </nav>
         <!-- Page Content-->
         <div class="container-fluid p-0">
@@ -69,8 +82,8 @@
                     <div class="container" id="mainText">
                       <div class="row mb-4 align-items-center">
                         <div class="col-md-6" data-aos="fade-up">
-                          <h2>Team Project</h2>
-                          <p>T-map API를 활용한 도보기준 신호등 지도</p>
+                          <h2>Project</h2>
+                          <p>이상형 월드컵 사이트</p>
                         </div>
                       </div>
                     </div>
@@ -79,7 +92,7 @@
                         <div class="container">
                             <div class="row align-items-stretch">
                                 <div class="col-md-8" data-aos="fade-up">
-                                    <img src="img/rutin_1.png" alt="Image" class="img-fluid">
+                                    <img src="img/worldcup/index.png" alt="Image" class="img-fluid">
                                 </div>
                                 <div class="col-md-3" id="sideText" data-aos="fade-up" data-aos-delay="100" style="position: absolute; right: 0px; margin-right: 2%;">
                                     <div class="sticky-content">
@@ -98,17 +111,15 @@
                                             <li>CSS</li>
                                             <li>HTML</li>
                                             <li>MySQL</li>
-                                            <li>Spring Boot</li>
+                                            <li>Spring Framework</li>
                                             <li>MySQL Developer</li>
                                             <li>IntelliJ</li>
                                             <li>Apache Tomcat9.0</li>
-                                            <li>T-map API</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div style="margin-top: 80px; margin-bottom: -80px;">
-                                    <p><a href="https://github.com/preferJ/MinitMap" class="readmore">프로젝트 상세코드 확인하기(GitHub)</a></p>
-                                    <a href="pptx/MinitMap.pptx" download>발표 자료 pptx 다운</a>
+                                <div style="margin-top: 30px; margin-bottom: -80px;">
+                                    <p><a href="https://github.com/21su/project" class="readmore">프로젝트 상세코드 확인하기(GitHub)</a></p>
                                 </div>
                             </div>
                         </div>
@@ -117,6 +128,66 @@
             </section>
             <hr class="m-0" />
             <!-- Experience-->
+            <section class="resume-section" id="my">
+                <div class="resume-section-content">
+                    <div class="container">
+                        <h4>벤치마킹</h4>
+                        <br />
+                        <p>&nbsp;&nbsp;1. PIKU 이상형 월드컵 사이트를 참고</p>
+                        <p>&nbsp;&nbsp;2. 참고사이트: <a href="https://www.piku.co.kr/">https://www.piku.co.kr/</a></p>
+                         <br />
+                        <h4 class="mb-5">주요 기능</h4>
+                        <br />
+                        <p>&nbsp;&nbsp;1. 비회원도 월드컵을 진행할 수 있지만 댓글을 남기거나 제작/수정이 불가능</p>
+                        <p>&nbsp;&nbsp;2. 회원가입/로그인 기능으로 회원상태로 진행할 수 있으며, 회원은 월드컵 제작 및 자신이 만든 작품 수정 가능</p>
+                        <p>&nbsp;&nbsp;3. admin 계정을 통해 의도가 벗어난 글은 삭제 및 회원 제재 가능</p>
+                        <br />  
+                        <h4 class="mb-5">상세 기능</h4>
+                        <br />
+                        <h4>1. 메인 페이지 기능</h4>
+                        <br />
+                        <p>&nbsp;&nbsp;- 최근에 추가된 순서대로 공개 상태인 월드컵을 리스트에 출력함.</p>
+                        <p>&nbsp;&nbsp;- 리스트는 첫번째와 두번째 사진을 메인으로 걸어두고 월드컵 이름 설명 등을 출력</p>
+                        <p>&nbsp;&nbsp;- 리스트 상단에 검색 기능이 있음</p>
+                        <p>&nbsp;&nbsp;- 시작 버튼을 통해 해당 월드컵으로 이동</p>
+                        <br />              
+                        <h4>2. 월드컵 제작 기능</h4>
+                        <br />
+                        <p>&nbsp;&nbsp;- 회원 상태일 경우에만 사용 가능하며 제목과 월드컵 설명 및 공개 여부를 정할수 있음</p>
+                        <p>&nbsp;&nbsp;- 그 후 사용할 이미지파일을 업로드 하고 이미지 수정 탭으로 넘어가 이미지를 변경, 삭제및 이름을 수정할 수 있음</p>
+                        <br />        
+                        <h4>3. 내가만든 월드컵</h4>
+                        <br />
+                        <p>&nbsp;&nbsp;- 회원 상태일 때 내가 만들었던 월드컵이 출력되고 월드컵시작 및 랭킹확인 월드컵 수정 탭으로 이동하는 버튼과 해당 월드컵을 삭제하는 버튼이 같이 출력됨</p>
+                        <br />
+                        <h4>4. 내정보 창</h4>
+                        <br />
+                        <p>&nbsp;&nbsp;- 내정보 창에서 비밀번호를 재확인 하면, 닉네임과 이메일 변경 가능</p>
+                        <br />
+                        <h4>5. 메인 월드컵 기능</h4>
+                        <br />
+                        <p>&nbsp;&nbsp;- 월드컵을 시작하면 업로드 된 이미지의 수량에 따라 실행할 라운드 수를 정할 수 있음</p>
+                        <p>&nbsp;&nbsp;- 라운드 수를 정하면 해당 라운드에 맞는 개수의 이미지를 랜덤으로 2개의 리스트로 나눠서 받아옴</p>
+                        <p>&nbsp;&nbsp;- 라운드 진행시 2개의 리스트의 같은 인덱스의 이미지를 화면에 출력 유저가 둘중 하나를 선택하면 다음 인덱스의 이미지를 출력 마지막 이미지를 선택후 선택된 이미지를 리스트로 받아서 다시 한번 해당 주소로 호출</p>
+                        <p>&nbsp;&nbsp;- 선택된 이미지를 랜덤하게 2개의 리스트로 다시 나눠 담음</p>
+                        <p>&nbsp;&nbsp;- 그렇게 반복 후 마지막 이미지가 남으면 랭킹 테이블에 삽입 후 결과 및 랭킹 확인창으로 넘어감</p>
+                        <br />
+                        <h4>6. 랭킹 확인창</h4>
+                        <br />
+                        <p>&nbsp;&nbsp;- 해당 월드컵에 최종으로 선택된 이미지의 데이터를 기준으로 몇번 선택 되었는지를 비율로 나타내 며 해당 월드컵에 관한 댓글들을 남길 수 있음</p>
+                        <br />              
+                        <h4>7. 어드민 계정 기능</h4>
+                        <br />
+                        <p>&nbsp;&nbsp;- 어드민 계정 로그인 시 월드컵의 삭제가 가능해지며, 헤더에 회원관리 창으로 이동할 수 있는 버튼이 활성화 됨</p>
+                        <p>&nbsp;&nbsp;- 회원관리 창에서는 회원 목록이 출력되며 회원 삭제가 가능함</p>
+                        <br />              
+                        <h4>8. CSS작성</h4>
+                        <br />
+                        <p>&nbsp;&nbsp;- 웹 페이지에 사용되는 모든 CSS를 작성함. </p>
+                        <br />
+                    </div>
+            </section>
+            <hr class="m-0" />
             <section class="resume-section" id="main">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Experience</h2>

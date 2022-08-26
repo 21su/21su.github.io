@@ -29,14 +29,20 @@
             var width_size = window.outerWidth;
             var sideText = document.getElementById("sideText");
             var mainText = document.getElementById("mainText");
-            if (width_size < 785) {
+            var homebut1 = document.getElementById("homebut1");
+            var homebut2 = document.getElementById("homebut2");
+            if (width_size < 1008) {
                 sideText.style.position = "static";
                 sideText.style.marginTop = "15px";
                 mainText.style.marginTop = "150px";
+                homebut1.style.display = "none";
+                homebut2.style.display = "inline";
             } else{
                 sideText.style.position = "absolute";
                 sideText.style.marginTop = "0px";
                 mainText.style.marginTop = "80px";
+                homebut1.style.display = "inline";
+                homebut2.style.display = "none";
             }
         }
         </script>
@@ -48,6 +54,9 @@
                 <span class="d-block d-lg-none">H.SS Portfolio</span>
                 <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="..." /></span>
             </a>
+            <div id="homebut2" style="display: none;">
+                <button class="btn btn-outline-secondary" style="float: right;" type="button" onclick="location.href='index.html'">홈으로</button>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
@@ -61,7 +70,9 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#gps">내 위치</a></li>
                 </ul>
             </div>
-            <button class="d-grid gap-2 col-10 mx-auto mb-5 btn btn-outline-secondary" style="margin-top: -70px;" type="button" onclick="location.href='index.html'">홈으로</button>
+            <div id="homebut1" style="display: inline; width: 100%;">
+                <button class="d-grid gap-2 col-10 mx-auto mb-5 btn btn-outline-secondary" style="margin-top: -70px;" type="button" onclick="location.href='index.html'">홈으로</button>
+            </div>
         </nav>
         <div class="container-fluid p-0">
             <section class="resume-section" id="about">
